@@ -19,3 +19,5 @@ Additional (for Footer):
 - FAQ
 - Sitemap
 - Terms & Conditions
+
+Error 404 
