@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <main class="container">
-          
-        </main>
-    </body>
-</html>s
+
+<head>
+    <?php
+        include "inc/head.inc.php";
+    ?>
+</head>
+
+
+<body>
+    <!--Navbar-->
+    <?php
+        include "inc/nav.inc.php";
+    ?>
+    <!--End of Navbar-->
+
+    <main>
+        
+    </main>
+    <!--Footer-->
+    <?php
+        include "inc/footer.inc.php";
+    ?>
+    <!--End of Footer-->
+
+    <!--Custom JS-->
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
