@@ -14,7 +14,7 @@ About Us
 - Blog --backend
 - Contact Us
 
-- Additional (for Footer):
+Additional (for Footer):
 - Social Media Links (Icons) 
 - FAQ
 - Sitemap
