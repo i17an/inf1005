@@ -21,8 +21,8 @@
 **7. Classes/Pricing/Offers (Dynamic)**
    - List the prices of signing up for the gym membership and its' benefits
    - Individual classes / Group Classes (Select Dates, Checkout) -- Must be logged in
-**8. Payment Page (Dynamic)
-9. Blog (Dynamic)**
+****8. Payment Page (Dynamic)
+9. Blog (Dynamic)****
    - User Testimonials?
    - Stories?
 **10. Contact Us (Static)**
