@@ -1,7 +1,7 @@
 
 **Main Pages (Nav Bar)**:
-1. **Home**
-   - User Reviews/Testimonials 
+1. **Home (Static/Dynamic)** 
+   - User Reviews/Testimonials (do we do this in dynamic?) 
 2. **About Us (Static)**
    - Brief Background Story
    - Trainers
