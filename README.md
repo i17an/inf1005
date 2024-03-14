@@ -41,9 +41,12 @@ Note: Dynamic requires the use of back-end operations
 - In cases where the page is broken or doesn't exist
 - Return to the home page 
 
+Admin Page? (Login for admin on the website)
+- Admin Dashboard (Interactive Graphs) - Splunk? 
+
 GitHub Commands:
--git add
--git commit -m "message"
--git commit -a
--git push
--git status
+- git add
+- git commit -m "message"
+- git commit -a
+- git push
+- git status
