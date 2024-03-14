@@ -40,3 +40,10 @@ Note: Dynamic requires the use of back-end operations
 **ERROR404 page**
 - In cases where the page is broken or doesn't exist
 - Return to the home page 
+
+GitHub Commands:
+-git add
+-git commit -m "message"
+-git commit -a
+-git push
+-git status
