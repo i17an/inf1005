@@ -29,7 +29,7 @@
     - Contact Information (Contact Number, Email)
     - Contact Form
 
-Note: Dynamic requires back-end
+Note: Dynamic requires the use of back-end operations
 
 **Footer Links:**
 1. Link to Social Media Accounts (Icons)
@@ -37,6 +37,6 @@ Note: Dynamic requires back-end
 3. Sitemap (All the links and pages on the site)
 4. Terms & Conditions
 
-ERROR404 page 
+**ERROR404 page**
 - In cases where the page is broken or doesn't exist
 - Return to the home page 
