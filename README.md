@@ -25,7 +25,7 @@
 9. **Blog (Dynamic)**
    - User Testimonials?
    - Stories?
-10. **Contact Us (Static)**
+10. **Contact Us (Dynamic)**
     - Contact Information (Contact Number, Email)
     - Contact Form
 
@@ -45,7 +45,8 @@ Admin Page? (Login for admin on the website)
 - Admin Dashboard (Interactive Graphs) - Splunk? 
 
 GitHub Commands:
-- git add
+- git pull
+- git add .
 - git commit -m "message"
 - git commit -a
 - git push
