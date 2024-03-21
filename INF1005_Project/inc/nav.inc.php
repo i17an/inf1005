@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/">CLASSES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">SHOP</a>
+                        <a class="nav-link" aria-current="page" href="/shop.php">SHOP</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/">BLOG</a>
