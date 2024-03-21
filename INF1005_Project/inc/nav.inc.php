@@ -34,7 +34,7 @@
                     <li class="nav-item-btn">
                         <button type="button" class="btn btn-primary"
                             style="font-size: 21px;background-color: #03C988;padding: 0;border-radius:12px;width:150px;font-weight: 600;text-align: center; border: none;">
-                            <a class="nav-link" href="/">JOIN NOW</a>
+                            <a class="nav-link" href="/register.php">JOIN NOW</a>
                         </button>
                     </li>
                 </ul>
