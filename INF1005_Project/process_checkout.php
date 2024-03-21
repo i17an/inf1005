@@ -25,8 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Database connection credentials
     $servername = "127.0.0.1"; // Change this to your MySQL server
-    $username = "inf1005-sqldev"; // Change this to your MySQL username
-    $password = "password"; // Change this to your MySQL password
+    $username = "inf1005-sqldev2"; // Change this to your MySQL username
+    $password = "inf1005_p5-8"; // Change this to your MySQL password
     $database = "Products"; // Change this to your MySQL database name
 
     // Create connection
