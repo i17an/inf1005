@@ -19,7 +19,6 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 </head>
 <body class="checkout_body">
     <?php include "inc/nav.inc.php"; ?>
-    <?php include "inc/header.inc.php"; ?>
     <main class="container checkout_main">
         <h1>Checkout</h1>
 
