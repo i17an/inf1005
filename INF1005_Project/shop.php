@@ -6,17 +6,16 @@
 </head>
 <body class="shop-page">
     <?php include "inc/nav.inc.php"; ?>
-    <?php include "inc/header.inc.php"; ?>
 
     <main class="container shop-main">
         <section id="shop">
             <h2 class="shop-title">Shop</h2>
             <div class="row">
                 <?php
-                include "inc/sql_login.inc.php";
+                include "inc/db_connect.php";
 
                 // Query to select products from the database
-                $sql = "SELECT * FROM ProductsTable";
+                $sql = "SELECT * FROM products";
                 $result = $conn->query($sql);
 
                 // Check if there are any products
