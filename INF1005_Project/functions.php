@@ -1,10 +1,10 @@
 <?php
 // Function to retrieve product details from the database based on the product ID
 function getProductDetails($product_id) {
-    include "inc/sql_login.inc.php";
+    include "inc/db_connect.php";
 
     // Prepare SQL query to retrieve product details based on the product ID
-    $sql = "SELECT * FROM ProductsTable WHERE ID = $product_id";
+    $sql = "SELECT * FROM products WHERE ID = $product_id";
     $result = $conn->query($sql);
 
     // Check if the query was successful and if it returned any rows
