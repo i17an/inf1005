@@ -17,10 +17,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $address = $_POST['address'];
 
-    include "inc/sql_login.inc.php";
+    include "inc/db_connect.php";
 
     // Prepare and bind the INSERT statement
-    $stmt = $conn->prepare("INSERT INTO OrdersTable (Name, Address, OrderDate) VALUES (?, ?, NOW())");
+    $stmt = $conn->prepare("INSERT INTO orders (Name, Address, OrderDate) VALUES (?, ?, NOW())");
     $stmt->bind_param("ss", $name, $address);
 
     // Execute the statement
