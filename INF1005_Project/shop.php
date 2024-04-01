@@ -13,7 +13,7 @@
             <h2 class="shop-title">Shop</h2>
             <div class="row">
                 <?php
-                include "sql_login_details.php";
+                include "inc/sql_login.inc.php";
 
                 // Query to select products from the database
                 $sql = "SELECT * FROM ProductsTable";
