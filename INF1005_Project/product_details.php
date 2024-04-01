@@ -6,7 +6,6 @@
 </head>
 <body class="details_page_body">
     <?php include "inc/nav.inc.php"; ?>
-    <?php include "inc/header.inc.php"; ?>
     <?php include "functions.php"; ?>
 
     <main class="container details_page_main">
@@ -33,11 +32,11 @@
                 echo '<p><strong>Overview:</strong><br>' . nl2br($product['Description']) . '</p>';
                 echo '<p>Price: $' . number_format($product['Price'], 2) . '</p>';
                 // Add to cart form
-                echo '<form action="add_to_cart.php" method="post">';
+                echo '<form action="add_to_cart.php" method="post" class="add-to-cart-form">';
                 echo '<input type="hidden" name="product_id" value="' . $product['ID'] . '">';
                 echo '<input type="hidden" name="product_name" value="' . $product['Name'] . '">';
                 echo '<input type="hidden" name="product_price" value="' . $product['Price'] . '">';
-                echo '<button type="submit" class="btn btn-primary">Add to Cart</button>';
+                echo '<button type="submit" class="btn btn-primary add-to-cart">Add to Cart</button>';
                 echo '</form>';
                 // View Cart link
                 echo '<a href="view_cart.php" class="view-cart_product-details">';
