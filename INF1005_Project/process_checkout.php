@@ -17,25 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $address = $_POST['address'];
 
-    // Here you can perform further validation and sanitization of other form fields
-
-    // If everything is valid, you can process the order
-    // For demonstration purposes, let's assume the order is processed successfully
-    // You can add your logic here to save the order details to the database, send confirmation emails, etc.
-
-    // Database connection credentials
-    $servername = "127.0.0.1"; // Change this to your MySQL server
-    $username = "inf1005-sqldev2"; // Change this to your MySQL username
-    $password = "inf1005_p5-8"; // Change this to your MySQL password
-    $database = "Products"; // Change this to your MySQL database name
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $database);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include "inc/sql_login.inc.php";
 
     // Prepare and bind the INSERT statement
     $stmt = $conn->prepare("INSERT INTO OrdersTable (Name, Address, OrderDate) VALUES (?, ?, NOW())");
