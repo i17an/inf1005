@@ -1,4 +1,4 @@
-<nav id="nav-bar" class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" aria-expanded="true">
+<nav id="navBar" class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" aria-expanded="true">
         <div class="container-fluid">
             <!--Company's Logo-->
             <a class="navbar-brand" href="/">
@@ -10,26 +10,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-tab">
                         <a class="nav-link" aria-current="page" href="/" style="color:#03C988;">HOME</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">ABOUT US</a>
+                    <li class="nav-tab">
+                        <a class="nav-link" href="/about.php">ABOUT US</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">CLASSES</a>
+                    <li class="nav-tab">
+                        <a class="nav-link" href="/classes.php">CLASSES</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/shop.php">SHOP</a>
+                    <li class="nav-tab">
+                        <a class="nav-link" href="/shop.php">SHOP</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">BLOG</a>
+                    <li class="nav-tab">
+                        <a class="nav-link" href="/blog.php">BLOG</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">FIND A GYM</a>
+                    <li class="nav-tab">
+                        <a class="nav-link" href="/locations.php">FIND A GYM</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">CONTACT US</a>
+                    <li class="nav-tab">
+                        <a class="nav-link" href="/contact-us.php">CONTACT US</a>
                     </li>
                     <li class="nav-item-btn">
                         <button type="button" class="btn btn-primary"
@@ -41,3 +41,4 @@
             </div>
         </div>
     </nav>
+    

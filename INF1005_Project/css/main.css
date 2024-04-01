@@ -2,72 +2,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans Caption', sans-serif;
-}
-
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 /*Navigation Bar*/
 
-#nav-bar {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  opacity: 1;
+#navBar {
+  width: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  padding: 20px 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  opacity: 1 !important;
   background-color: transparent !important;
-  --bs-navbar-color: white;
-  font-size: 23px;
-  font-weight: 800;
+  --bs-navbar-color: white !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  z-index: 1000 !important;
 }
 
 #navbarNav {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .navbar-nav li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 25px;
+  list-style: none !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
 }
 
-.nav-item .nav-link,
-.nav-item .nav-link-btn {
-  text-decoration: none;
-  color: white;
-  font-size: 21px;
-  box-shadow: inset 0 0 0 0 white;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+.nav-tab .nav-link,
+.nav-tab .nav-link-btn {
+  text-decoration: none !important;
+  color: white !important;
+  box-shadow: inset 0 0 0 0 white !important;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out !important;
 }
 
-.nav-item .nav-link:hover {
-  color: black;
-  box-shadow: inset 250px 0 0 0 white;
+.nav-tab .nav-link:hover {
+  color: black !important;
+  box-shadow: inset 250px 0 0 0 white !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em white;
+  box-shadow: 0 0.5em 0.5em -0.4em white !important;
 }
 
 /*End of Navigation Bar*/
 
 /*Footer*/
-.footer {
+.footer-footer {
   background-color: #EEEEEE;
   padding: 70px 0;
 }
@@ -87,13 +75,13 @@ nav {
   padding: 0 15px;
 }
 
-.footer .footer-row {
+.footer-footer .footer-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.footer .footer-col {
+.footer-footer .footer-col {
   flex: 1;
 }
 

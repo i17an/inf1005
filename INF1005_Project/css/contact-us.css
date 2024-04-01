@@ -1,0 +1,196 @@
+main {
+    min-height: 148vh;
+    background: #0F0E0E;
+}
+
+/*Contact Us Form*/
+.contact-form {
+    background-color: #fff;
+    padding-bottom: 140px;
+    padding-top: 80px;
+}
+
+.padded {
+    padding: 0 30rem;
+}
+
+.btn-info {
+    margin-left: 1rem;
+}
+
+.form-group-label .icon i{
+    font-size: 25px;
+    padding: 5px 0px;
+}
+
+/* Ensure textarea and buttons are full width on smaller screens */
+textarea,
+.btn-group .btn-info {
+    width: 100%;
+}
+
+.btn-group .btn-info{
+    background-color: #03C988 !important;
+    padding-right: auto;
+    padding-left: auto;
+    font-weight: 500;
+    font-size: 18px;
+    border: none !important;
+}
+
+/*Make the form responsive*/
+/* Adjust padding for smaller screens */
+@media (max-width: 1200px) {
+    .padded {
+        padding: 0 10rem; /* less padding on smaller desktops */
+    }
+}
+
+@media (max-width: 992px) {
+    .padded {
+        padding: 0 5rem; /* even less padding on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .padded {
+        padding: 0 2rem; /* suitable padding on mobile devices */
+    }
+
+    /* Stack form group items vertically on smaller screens */
+    .form-section .section-body .form-group {
+        width: 100%;
+    }
+}
+
+/* Responsive adjustments for form group columns */
+@media (max-width: 991px) {
+    .form-group.col-4,
+    .form-group.col-8,
+    .form-group.col-6 {
+        width: 100%; /* Full width on small screens */
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0; /* Remove padding */
+        padding-right: 0; /* Remove padding */
+    }
+
+    .form-group-label {
+        margin-bottom: .5rem; /* Add space between icon and input on small screens */
+    }
+}
+
+/* Responsive text alignment for titles and paragraphs */
+@media (max-width: 991px) {
+    .editorial-title .headline,
+    .contact-info b,
+    .faq-info b {
+        text-align: left;
+    }
+}
+
+
+/*Contact Details*/
+
+.text-module {
+    padding: 40px 20px;
+}
+
+.text-module .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* Row styling for flex display */
+.text-module .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Column styling */
+.col-lg-6 .col-md-12 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+
+    .col-lg-6 {
+        width: 100%;
+        float: none;
+    }
+}
+
+.editorial-title .headline {
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    color: white;
+}
+
+/* Text content styling */
+.contact-info,
+.faq-info {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.contact-info b,
+.faq-info b {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.contact-info p,
+.faq-info p {
+    font-size: 18px;
+}
+
+.contact-info p a,
+.faq-info p a {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-info p a:hover,
+.faq-info p a:hover {
+    color: #03C988;
+    text-decoration: none;
+}
+
+/*contact-process*/
+.submit-btn-error{
+    background-color: #f44336;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 7px;
+}
+
+.submit-btn-success{
+    background-color: #03C988;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 7px;
+}
+
+.errorMsg, .successMsg{
+    padding-top:100px;
+    padding-bottom: 100px;
+    text-align: center;
+    color: white;
+}
+
+.errorMsg p{
+    color: #f44336;
+}

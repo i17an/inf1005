@@ -1,5 +1,3 @@
-document.querySelector('video').playbackRate = 0.8;
-
 document.addEventListener("DOMContentLoaded", function () {
     registerEventListeners();
     activateMenu();

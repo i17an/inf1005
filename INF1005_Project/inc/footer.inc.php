@@ -1,21 +1,21 @@
-<footer class="footer">
+<footer class="footer-footer">
     <div class="footer-container">
         <div class="footer-row">
             <div class="footer-col">
                 <h4>Explore</h4>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">About Us</a></li>
-                    <li><a href="/">Classes</a></li>
-                    <li><a href="/">Shop</a></li>
-                    <li><a href="/">Blog</a></li>
+                    <li><a href="/about.php">About Us</a></li>
+                    <li><a href="/classes.php">Classes</a></li>
+                    <li><a href="/shop.php">Shop</a></li>
+                    <li><a href="/blog.php">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Connect</h4>
                 <ul>
-                    <li><a href="/">Find A Gym</a></li>
-                    <li><a href="/">Contact Us</a></li>
+                    <li><a href="/locations.php">Find A Gym</a></li>
+                    <li><a href="/contact-us.php">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
