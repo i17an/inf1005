@@ -40,7 +40,6 @@ if(isset($_GET['reset_cart'])) {
 </head>
 <body class="view_cart_body">
     <?php include "inc/nav.inc.php"; ?>
-    <?php include "inc/header.inc.php"; ?>
 
     <main class="container view_cart_main">
         
