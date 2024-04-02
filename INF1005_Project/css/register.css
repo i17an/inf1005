@@ -1,0 +1,111 @@
+/* register.css */
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Style for the registration container */
+.registration-form {
+    z-index: 1000; /* Ensure it's on top of other elements */
+    position: relative; /* z-index requires a position other than 'static' */
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+@media (min-width: 576px) {
+    .registration-form {
+        max-width: 400px; /* Adjust width on larger screens */
+    }
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Style for the input and label */
+.registration-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: calc(100% - 1.5rem); /* Adjust width taking padding and borders into account */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem; /* Increase font size if needed */
+}
+
+/* Style for the submit button */
+.registration-form .form-actions {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.registration-form .btn {
+    background: #5cb85c;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem; /* Adjust font size as necessary */
+    width: 100%; /* Make the button full-width */
+}
+
+.registration-form .btn:hover {
+    background: #4cae4c;
+}
+
+/* Link to the login page */
+.registration-form a {
+    color: #333;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Error and success message styling */
+.error-message,
+.success-message {
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: red;
+    background: #ffdada; /* light red background */
+}
+
+.success-message {
+    color: black;
+    background: #daffda; /* light green background */
+}
+
+/* Overlay style to ensure it doesn't overlap the form */
+.overlay {
+    z-index: 1; /* Behind the form */
+    position: absolute; /* Required for z-index to take effect */
+    width: 100%;
+    height: 100%;
+    /* Rest of the style here */
+}
+
+/* Ensure the video is also behind */
+.showcase video {
+    z-index: 0; /* Behind the overlay */
+    position: absolute; /* Required for z-index to take effect */
+    /* Rest of the video styling here */
+}
+
