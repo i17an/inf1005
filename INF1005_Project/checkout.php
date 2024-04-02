@@ -56,7 +56,7 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
             <!-- Checkout form -->
             <h2>Checkout Form</h2>
-            <form action="process_checkout.php" method="post">
+            <form action="process_checkout.php" method="post" class="checkout-form">
                 <!-- Add input fields for user details like name, address, etc. -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br><br>
