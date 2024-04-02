@@ -1,68 +1,63 @@
 <?php
+include "functions.php";
 session_start();
 
-// Include database connection
-include "inc/db_connect.php";
-
-// Initialize variables for form validation
-$id = $name = $description = $price = $image = "";
-$id_err = $name_err = $description_err = $price_err = $image_err = "";
-
-// Handle form submission
+// Check if the form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate and sanitize input
+    // Retrieve and sanitize form data
     $id = sanitize_input($_POST['id']);
     $name = sanitize_input($_POST['name']);
+    $price = intval($_POST['price']); // Assuming Price is a decimal type in your database
     $description = sanitize_input($_POST['description']);
-    $price = floatval($_POST['price']); // Convert price to float
-    // Validate image upload
-    if(isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-        $image = $_FILES['image'];
-        // Check if the uploaded file is an image
-        $allowed_types = array("image/jpeg", "image/png");
-        if(!in_array($image['type'], $allowed_types)) {
-            $image_err = "Only JPG, PNG, and GIF files are allowed.";
+
+    // Validate user input
+    if (validate_input_addProduct($name, $price)) {
+        include "inc/db_connect.php";
+
+        // Check if image is uploaded
+        if(!isset($_FILES["image"]) || $_FILES["image"]["error"] != UPLOAD_ERR_OK) {
+            $errors[] = "Please upload an image.";
+        } else {
+            // Handle file upload
+            $target_directory = "images/";
+            $target_file = $target_directory . basename($_FILES["image"]["name"]);
+
+            // Check if file is an image
+            $image_info = getimagesize($_FILES["image"]["tmp_name"]);
+            if(!$image_info) {
+                $errors[] = "Uploaded file is not an image.";
+            } else {
+                // Move uploaded image to target directory
+                if(!move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                    $errors[] = "Failed to upload image.";
+                }
+            }
         }
-    } else {
-        $image_err = "Please upload an image.";
-    }
 
-    // Validate other fields
-    if(empty($id)) {
-        $id_err = "Please enter an ID for the product.";
-    }
-    if(empty($name)) {
-        $name_err = "Please enter a name for the product.";
-    }
-    if(empty($description)) {
-        $description_err = "Please enter a description for the product.";
-    }
-    if(empty($price) || $price <= 0) {
-        $price_err = "Please enter a valid price for the product.";
-    }
+        
+        // Perform SQL insertion
+        $sql = "INSERT INTO products (ID, Name, Price, Description, Image) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssiss", $id, $name, $price, $description, $target_file);
 
-    // If no errors, insert product into database
-    if(empty($id_err) && empty($name_err) && empty($description_err) && empty($price_err) && empty($image_err)) {
-        // Move uploaded image to a directory
-        $target_dir = "images/";
-        $target_file = $target_dir . basename($image["name"]);
-        move_uploaded_file($image["tmp_name"], $target_file);
-
-        // Insert product into database
-        $stmt = $conn->prepare("INSERT INTO products (ID, Name, Description, Price, Image) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("isds", $id, $name, $description, $price, $target_file);
+        // Execute the statement
         $stmt->execute();
-        $stmt->close();
 
-        // Redirect to admin dashboard or display a success message
-        //header("Location: admin_dashboard.php");
+        // Close statement and database connection
+        $stmt->close();
+        $conn->close();
+
+        // Redirect back to the shop page or any other page
         header("Location: shop.php");
         exit();
+    } else {
+        // Redirect the user back to the checkout page with an error message
+        header('Location: admin_addProduct.php?error=invalid_input');
+        exit();
     }
-}
-
-// Function to sanitize user input
-function sanitize_input($input) {
-    return htmlspecialchars(trim($input));
+} else {
+    // If the form is not submitted via POST method, redirect the user back to the checkout page
+    header('Location: admin_addProduct.php');
+    exit();
 }
 ?>
