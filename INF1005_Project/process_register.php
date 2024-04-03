@@ -5,6 +5,11 @@
     <?php
         include "inc/head.inc.php";
     ?>
+    <style>
+        main {
+            min-height: 100vh; /* Override the min-height property */
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
