@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
 
         // Redirect back to the shop page or any other page
-        header("Location: shop.php");
+        header("Location: admin_addProduct.php");
         exit();
     } else {
         // Redirect the user back to the checkout page with an error message
