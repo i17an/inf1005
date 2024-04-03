@@ -27,3 +27,19 @@ function activateMenu() {
         }
     });
 }
+
+function checkForm(){
+    let password = document.getElementById("pwd").value;
+    let confirmPassword = document.getElementById("pwd_confirm").value;
+    let message = document.getElementById("message");
+
+    if(password.length != 0){
+        if(password !== confirmPassword){
+            message.textContent="Passwords do not match!";
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+}
