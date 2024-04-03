@@ -5,7 +5,7 @@
     <?php include "inc/head.inc.php"; ?>
 </head>
 <body class="details_page_body">
-    <?php include "inc/nav.inc.php"; ?>
+    <?php include "inc/include_nav.php"; ?>
     <?php include "functions.php"; ?>
 
     <main class="container details_page_main">
