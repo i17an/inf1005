@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+// check if not logged in
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: login.php');
+    exit();
+}
+
 // Check if the product ID, name, and price are received via POST
 if(isset($_POST['product_id'], $_POST['product_name'], $_POST['product_price'])) {
     // Retrieve product data from the POST request
