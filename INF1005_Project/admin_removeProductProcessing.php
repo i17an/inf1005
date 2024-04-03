@@ -27,10 +27,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $conn->close();
 } else {
     // Redirect the user back to the page listing products if product ID is not provided
-    header("Location: admin_removeProducts.php");
+    header("Location: admin_removeProduct.php");
     exit();
 }
 
 // Redirect the user back to the page listing products
-header("refresh:2;url=admin_removeProducts.php"); // Redirect after 2 seconds
+header("refresh:2;url=admin_removeProduct.php"); // Redirect after 2 seconds
 ?>
