@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+// check if not logged in
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: login.php');
+    exit();
+}
+
 // Check if the cart exists in the session
 if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     // Cart exists and is not empty
