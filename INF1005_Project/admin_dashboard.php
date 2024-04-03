@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
     </button>
     <ul>
         <li><a href="admin_addProduct.php">Add Product</a></li>
-        <!-- Add more links to other admin functionalities if needed -->
+        <li><a href="admin_removeProduct.php">Remove Product</a></li>
     </ul>
 </body>
 </html>
