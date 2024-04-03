@@ -9,11 +9,19 @@
 
 
 <body>
-    <!--Navbar-->
-    <?php
+<?php
+    // Initialize the session
+    session_start();
+
+    // Check if the user is logged in
+    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+        // If user is logged in, include the profile navigation
+        include "inc/nav.inc.profile.php";
+    } else {
+        // If user is not logged in, include the regular navigation
         include "inc/nav.inc.php";
+    }
     ?>
-    <!--End of Navbar-->
     <main>
         <section class="showcase">
             <video src="assets/videos/gymvideo.mp4" muted loop autoplay></video>
