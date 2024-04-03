@@ -5,7 +5,7 @@
     <?php include "inc/head.inc.php"; ?>
 </head>
 <body class="shop-page">
-    <?php include "inc/nav.inc.php"; ?>
+    <?php include "inc/include_nav.php"; ?>
 
     <main class="container shop-main">
         <section id="shop">
