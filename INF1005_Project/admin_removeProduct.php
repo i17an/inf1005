@@ -1,5 +1,10 @@
 <?php
 session_start(); // Start the session
+// Check if the user is logged in as admin
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION["email"] !== "admin@email.com") {
+    header("location: login.php");
+    exit;
+}
 
 // Include necessary files and initialize database connection
 include "functions.php";
