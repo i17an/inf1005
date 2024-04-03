@@ -39,7 +39,7 @@ if(isset($_GET['reset_cart'])) {
     <?php include "inc/head.inc.php"; ?>
 </head>
 <body class="view_cart_body">
-    <?php include "inc/nav.inc.php"; ?>
+    <?php include "inc/include_nav.php"; ?>
 
     <main class="container view_cart_main">
         
